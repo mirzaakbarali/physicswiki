@@ -1,86 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, padding=40px">
-<style>
-    body {
-      padding-right: 5%;
-      padding-left: 5%;
-      padding-bottom: 5%;
-      margin: 0; /* Resetting default margin */
-    }
-
-body,
-h1 {
-    counter-reset: h2;
-}
-h2::before {
-    counter-increment: h2;
-    content: counter(h2) ' - ';
-}
-h2 {
-    counter-reset: h3;
-}
-h3::before {
-    counter-increment: h3;
-    content: counter(h2) '.' counter(h3) ' - ';
-}
-h3 {
-    counter-reset: h4;
-}
-h4 {
-    counter-reset: h5;
-}
-h4::before {
-    counter-increment: h4;
-    content: counter(h2) '.' counter(h3) '.' counter(h4) ' - ';
-}
-h5::before {
-    counter-increment: h5;
-    content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) ' - ';
-}
-.items{
-    text-align:center;
-    margin:50px auto;
-}
-.items figure{
-    margin:0px 20px;
-    display:inline-block;
-    text-decoration:none;
-    color:black;
-}
-img {
-    max-width: 100%;
-    height: auto;
-    width: auto; /* ie8 */
-}
-    /* Other CSS styles here */
-  </style>
-<style>
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 5%;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
-</style>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
