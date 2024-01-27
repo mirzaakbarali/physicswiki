@@ -1,5 +1,37 @@
 <!DOCTYPE html>
-<html>
+html, body {
+    height:100%;
+    margin:0;
+}
+#header {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    position: fixed;
+    z-index:999;
+}
+#parent {
+    width:100%;
+    height:100%;
+}
+#sidebar {
+    padding-top:50px; /* padding-top must be the same as header height */
+    width:200px;
+    height:100%;
+    background-color: blue;
+    box-sizing:border-box;
+    position: fixed;
+    z-index:99;
+}
+#main-content {
+    position: relative;
+    width: 100%;
+    padding-left:200px; /* padding-left must be the same as sidebar width */
+    height: 300px; /* This could be anything, content should scroll vertical */
+    background: green;
+    box-sizing:border-box;
+    padding-top: 50px; /* padding-top must be the same as header height */
+}
 <head>
     <link rel="stylesheet" href="styles.css" type="css">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, padding=40px">
