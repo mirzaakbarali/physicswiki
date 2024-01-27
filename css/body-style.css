@@ -1,3 +1,4 @@
+
     body{
         counter-reset: h2;
     }
@@ -49,4 +50,3 @@
         height: auto;
         width: auto; /* ie8 */
     }
-        /* Other CSS styles here */

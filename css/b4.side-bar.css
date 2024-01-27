@@ -3,7 +3,7 @@
  */
 
 html,
-body {
+body {;
     position: relative;
     min-height: 100%;
     font-size: 14px;
@@ -16,7 +16,7 @@ body {
     position: fixed;
     width: 18rem;
     height: 100%;
-    background-color: #252525;
+    background-color: #000000;
     border-right: 0.2rem solid rgba(220, 74, 79, 0.8);
     padding: 0;
 }
@@ -61,7 +61,7 @@ body {
 
 .side-bar-light .navbar-brand {
     background: #ddd;
-    color: #111;
+    color: #000000;
 }
 
 .side-bar .navbar {
@@ -133,7 +133,7 @@ body {
         height: 100%;
         top: 4rem;
         left: 0;
-        background-color: #252525;
+        background-color: #000000;
         border-right: 0.2rem solid rgba(220, 74, 79, 0.5);
         padding: 0;
         margin-left: -18rem;
