@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, padding=40px">
-    <title>Page with Sidebar and Search</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Boostrap 4 responsive Sidebar template with slide in/out effect">
+    <meta name="author" content="Simran Singh">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+    <title>Responsive sidebar - Boostrap 4 - Dark</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/b4.side-bar.css">
+    <link rel="stylesheet" href="./css/body-style.css">
+
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+    <script>MathJax = {tex: {tags: 'ams'}};</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<!-- index.html -->
+
 <body>
+    <!-- Include the sidebar content dynamically -->
+    <div id="sidebar-container"></div>
+    <div class="bodyContent">
+    <div style="padding:1rem">
+
+
+<!-- Write Body Text Below This -->
+
 <h1>Atom Field Interaction</h1>
+
 <p> We can think of atom field interaction in two scenarios. First, we consider the field classically, and second, we consider the field quantum mechanically. To begin, let us suppose that the Hamiltonian of an electron bound to an atom in the absence of external fields is given by: \begin{equation}
 \hat{H}_{0} = \frac{1}{2m}\hat{\bf{P}}^{2} + V(r) \label{ham}
 \end{equation}
+
 <h2>Interaction with Classical Field</h2>
 Within the dipole approximation, the interaction between field and atom is given by:
 \begin{align}\label{ham2}
@@ -43,7 +77,17 @@ P_{i\rightarrow f}^{(1)}(t) =  \frac{\left|(\hat{\bf{d}}\cdot{\bf{E}}_{0})_{fi}\
     <figure>
         <img src="https://i.pinimg.com/736x/ce/e6/38/cee6380aa5dbbc9cb42e67318331556d.jpg">
         <figcaption>For the resonant case, the probability is quadratic with respect to time, as shown in orange. However, the probability of transition oscillates between maximum and minimum for some detuning, as shown in green. </figcaption>
-    </figure>
-</div>
-</body>
+    </figure></div>
+
+<!-- Write Body Text Above This-->
+</div></div></body>
+    <!-- JavaScript includes -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="./js/b4.side-bar.js"></script>
+    <script src="./js/fetch-sidebar.js"></script>
 </html>
