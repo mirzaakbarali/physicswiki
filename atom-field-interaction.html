@@ -1,143 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, padding=40px">
-<style>
-    body {
-      padding-right: 5%;
-      padding-left: 15%;
-      padding-bottom: 5%;
-      margin: 0; /* Resetting default margin */
-    }
-
-body,
-h1 {
-    counter-reset: h2;
-}
-h2::before {
-    counter-increment: h2;
-    content: counter(h2) ' - ';
-}
-h2 {
-    counter-reset: h3;
-}
-h3::before {
-    counter-increment: h3;
-    content: counter(h2) '.' counter(h3) ' - ';
-}
-h3 {
-    counter-reset: h4;
-}
-h4 {
-    counter-reset: h5;
-}
-h4::before {
-    counter-increment: h4;
-    content: counter(h2) '.' counter(h3) '.' counter(h4) ' - ';
-}
-h5::before {
-    counter-increment: h5;
-    content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) ' - ';
-}
-.items{
-    text-align:center;
-    margin:50px auto;
-}
-.items figure{
-    margin:0px 20px;
-    display:inline-block;
-    text-decoration:none;
-    color:black;
-}
-img {
-    max-width: 100%;
-    height: auto;
-    width: auto; /* ie8 */
-}
-    /* Other CSS styles here */
-  </style>
-<style>
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 5%;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
-</style>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<script>
-MathJax = { 
-    tex: { 
-        tags: 'ams'}
-     };
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  font-family: Arial;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-}
-
-form.example button {
-  padding-top: 5%;
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #12181d;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-}
-
-form.example button:hover {
-  background: #1a0f0f;
-}
-
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
-<form class="example" action="/action_page.php">
-  <input type="text" placeholder="Search.." name="search">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, padding=40px">
+    <title>Page with Sidebar and Search</title>
+    <link rel="stylesheet" href="styles.css">
 <body>
 <h1>Atom Field Interaction</h1>
 <p> We can think of atom field interaction in two scenarios. First, we consider the field classically, and second, we consider the field quantum mechanically. To begin, let us suppose that the Hamiltonian of an electron bound to an atom in the absence of external fields is given by: \begin{equation}
@@ -177,23 +44,6 @@ P_{i\rightarrow f}^{(1)}(t) =  \frac{\left|(\hat{\bf{d}}\cdot{\bf{E}}_{0})_{fi}\
         <img src="https://i.pinimg.com/736x/ce/e6/38/cee6380aa5dbbc9cb42e67318331556d.jpg">
         <figcaption>For the resonant case, the probability is quadratic with respect to time, as shown in orange. However, the probability of transition oscillates between maximum and minimum for some detuning, as shown in green. </figcaption>
     </figure>
-</div>    
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
-
+</div>
 </body>
 </html>

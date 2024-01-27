@@ -1,76 +1,58 @@
-<!DOCTYPE html>
-<head>
-    <link rel="stylesheet" href="styles.css" type="css">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, padding=40px">
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
+
+<header>
+  <h1>Page with Sidebar and Search</h1>
+  <div id="search-bar">
+      <input type="text" id="search-input" placeholder="Enter search query">
+      <button id="search-button" onclick="searchPages()">Search</button>
+  </div>
+</header>
+
+<div id="container">
+  <div id="sidebar">
+      <a href="atom-field-interaction.html" onclick="showContent('page1')">Page 1</a>
+      <a href="#" onclick="showContent('page2')">Page 2</a>
+      <a href="#" onclick="showContent('page3')">Page 3</a>
+  </div>
+
+  <div id="main-content">
+      <h2>Welcome to the Main Content Area</h2>
+      <div id="page1" style="display: none;">
+      </div>
+      <div id="page2" style="display: none;">
+          <p>This is the content of Page 2.</p>
+      </div>
+      <div id="page3" style="display: none;">
+          <p>This is the content of Page 3.</p>
+      </div>
+  </div>
+</div>
+
 <script>
-MathJax = { 
-    tex: { 
-        tags: 'ams'}
-     };
+  function showContent(pageId) {
+      // Hide all pages
+      var pages = document.querySelectorAll('#main-content > div');
+      for (var i = 0; i < pages.length; i++) {
+          pages[i].style.display = 'none';
+      }
+
+      var selectedPage = document.getElementById(pageId);
+      if (selectedPage) {
+          selectedPage.style.display = 'block';
+      }
+  }
+
+  function searchPages() {
+      var query = document.getElementById('search-input').value.toLowerCase();
+      var pages = document.querySelectorAll('#main-content > div');
+
+      for (var i = 0; i < pages.length; i++) {
+          var pageContent = pages[i].textContent.toLowerCase();
+
+          if (pageContent.includes(query)) {
+              pages[i].style.display = 'block';
+          } else {
+              pages[i].style.display = 'none';
+          }
+      }
+  }
 </script>
-<title>Physics Wiki</title>
-</head>
-
-<body>
-
-<h1>Atom Field Interaction</h1>
-<p> We can think of atom field interaction in two scenarios. First, we consider the field classically, and second, we consider the field quantum mechanically. To begin, let us suppose that the Hamiltonian of an electron bound to an atom in the absence of external fields is given by: \begin{equation}
-\hat{H}_{0} = \frac{1}{2m}\hat{\bf{P}}^{2} + V(r) \label{ham}
-\end{equation}
-<h2>Interaction with Classical Field</h2>
-Within the dipole approximation, the interaction between field and atom is given by:
-\begin{align}\label{ham2}
-\hat{H} = \hat{H}_{0} - \hat{d}\cdot{\bf{E}}(t)
-\end{align}
-where \({\bf{E}}(t) = {\bf{E}}_0\cos(\omega t)\). The initial state of the atom is \(|i\rangle\) where \(\hat{H}_{0}|i\rangle = E_{i}|i\rangle\). For times \(t>0\), we expand the state vector \(|\psi(t)\rangle\) in terms of the complete set of uncoupled atomic states \(|k\rangle\) with normalized time-dependent amplitudes \(C_{k}(t)\):
-\begin{align}\label{wavefunc} 
-|\psi(t)\rangle =  \sum_{k}C_{k}(t)e^{-iE_{k}t/\hbar}|k\rangle \end{align}
-Solving the time-dependent Schrodinger Eq:
-\begin{align}\label{schrodingereq} 
-i\hbar \frac{\partial|\psi(t)\rangle}{\partial t} = \hat{H} |\psi(t)\rangle
-\end{align}
-gives first order transition probabilities:
-\begin{align}\label{prob}
-P_{i\rightarrow f}^{(1)}(t) = \left| C_{f}^{(1)}(t)\right| = \frac{\left|(\hat{\bf{d}}\cdot{\bf{E}}_{0})_{fi}\right|^2}{\hbar^2} \frac{\sin^2(\Delta t/2)}{\Delta^2}
-\end{align}
-where \(\Delta = \omega - \omega_{fi}\) is detuning between the radiation field and the atomic transition. 
-<h3>Resonant</h3>
-<p> \(\Delta = 0\), we can use the limit: \(\lim_{x\rightarrow 0} \frac{\sin(x)}{x}=1\)
-\begin{align}
-P_{i\rightarrow f}^{(1)}(t) =  \frac{\left|(\hat{\bf{d}}\cdot{\bf{E}}_{0})_{fi}\right|^2}{4\hbar^2} t^2
-\end{align}
-</p>
-<h3> Non Resonant </h3>
-<p> \(\Delta \neq 0\), maximum is given for \(\sin^2(\Delta t/2)=1\):
-\begin{align}
-P_{i\rightarrow f}^{(1)}(t) =  \frac{\left|(\hat{\bf{d}}\cdot{\bf{E}}_{0})_{fi}\right|^2}{\hbar^2}\frac{1}{\Delta^2}
-\end{align}
-</p>
-<div class="items">
-    <figure>
-        <img src="https://i.pinimg.com/736x/ce/e6/38/cee6380aa5dbbc9cb42e67318331556d.jpg">
-        <figcaption>For the resonant case, the probability is quadratic with respect to time, as shown in orange. However, the probability of transition oscillates between maximum and minimum for some detuning, as shown in green. </figcaption>
-    </figure>
-</div>    
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
-
-</body>
-</html>
