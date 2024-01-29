@@ -1,7 +1,7 @@
 // fetch-sidebar.js
 
 // Use fetch to load sidebar content
-fetch('../LICENSE.html')
+fetch('../footer.html')
     .then(response => response.text())
     .then(data => {
         // Insert the fetched content into the sidebar container
