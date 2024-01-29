@@ -1,12 +1,9 @@
-/*
- * @author: Simran Singh ( simran.singh2198@gmail.com )
- */
-
 html,
-body {;
+body {
+    flex: 100%;
     position: relative;
-    min-height: 100%;
     font-size: 14px;
+    min-height: 100vh;
 }
 
 
@@ -107,9 +104,17 @@ body {;
 }
 
 .bodyContent {
+    flex: 100%;
     font-size: large;
     font-family: sans-serif;
     /*same as side-bar width*/
+    margin-left: 18rem;
+}
+.footerContent {
+    background-color: #ac0a0a;
+    color: #fff;
+    text-align: center;
+    margin-top: auto;
     margin-left: 18rem;
 }
 
@@ -182,6 +187,7 @@ body {;
     .bodyContent {
         margin-top: 4rem;
         /*same as side-bar width*/
+        /* height: 100%; */
         margin-left: 2%;
         margin-right: 2%;
         transition: all 0.3s ease;
