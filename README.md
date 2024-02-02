@@ -34,8 +34,6 @@ your intended use. For example, other rights such as [publicity, privacy, or mor
 
 ## For more details
 <<<<<<< HEAD
-please visit
-=======
-visit
+
 >>>>>>> 2ee26b38cc18e3a4ccd9c68f428818f9007016e6
 <https://creativecommons.org/licenses/by-sa/4.0/>
