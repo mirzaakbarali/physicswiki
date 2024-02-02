@@ -33,5 +33,5 @@ No warranties are given. The license may not give you all of the permissions nec
 your intended use. For example, other rights such as [publicity, privacy, or moral rights](https://creativecommons.org/licenses/by-sa/4.0/#ref-publicity-privacy-or-moral-rights) may limit how you use the material.
 
 ## For more details
-
+please visit
 <https://creativecommons.org/licenses/by-sa/4.0/>
